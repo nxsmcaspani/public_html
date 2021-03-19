@@ -1,57 +1,66 @@
 /*
     lets use a nicer font
 */
+
 body {
     font-family: Helvetica;
 }
 
+
 /**
     Menu / Navigation bar setup
 **/
-.menu {    
+
+.menu {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
-    background-color: #444444;        
+    background-color: #444444;
 }
 
 .menu a {
     text-decoration: none;
     display: block;
     padding: 1em;
-    color: #8F8F8F;    
+    color: #8F8F8F;
 }
 
-.menu a:hover, .menu a:active {
-  background-color: #E0E0E0;
-  color: #B6B6B6;
+.menu a:hover,
+.menu a:active {
+    background-color: #E0E0E0;
+    color: #B6B6B6;
 }
+
 
 /* ***
     Carroussel showed below menu
  *** */
+
 .carousel {
     background-color: #EEEEEE;
     height: 12rem;
 }
 
+
 /*
     Fellows section design
 */
+
 .fellowstitle {
-    display: flex;        
+    display: flex;
     justify-content: center;
     margin: 0;
     padding: 0;
 }
 
-.fellowstitle h2 {    
+.fellowstitle h2 {
     text-align: center;
     color: #727272;
     font-size: 2em;
-    font-weight: bold;    
+    font-weight: bold;
 }
+
 .subtitle {
     text-align: center;
     padding-top: 10px;
@@ -60,23 +69,27 @@ body {
     font-size: 1.4rem;
 }
 
-.wanted > * {
-    display: flex;    
+.wanted>* {
+    display: flex;
     text-align: center;
 }
 
+
 /* forcing article as inline-block so they can vertically align due to the above text-align */
+
 .warrant {
     display: inline-block;
     margin: 0 2rem 6rem 2rem;
     background-color: #EEEEEE;
     height: 25rem;
-    width: 30%;    
+    width: 30%;
 }
+
 
 /*
     Contact section design
 */
+
 #contactus {
     text-align: center;
 }
@@ -88,12 +101,12 @@ body {
     font-weight: bold;
 }
 
-.contact {        
-    display: inline-block;  
+.contact {
+    display: inline-block;
     width: 80%;
 }
 
-.contact > * {
+.contact>* {
     margin: 1em 0 1em 0;
     width: 100%;
 }
@@ -102,23 +115,23 @@ body {
     height: 15rem;
 }
 
-
-
 @media screen and (max-device-width: 961px) {
+    /* On mobile we hide both Carousel & wanted sections */
     .carousel {
         display: none;
     }
     .wanted {
         display: none;
     }
-    .menu {    
+    /* also refactoring the size of the menu */
+    .menu {
         flex-flow: row;
     }
     .menu a {
         font-size: 0.8em;
         text-align: center;
     }
-    /* on mobile we display the title by colum */
+    /* in general, refactoring the font & fields sizes */
     .fellowstitle h2 {
         font-size: 1em;
     }
@@ -126,16 +139,14 @@ body {
         padding-top: 7px;
         font-size: 0.7em;
     }
-    
     #contactus h2 {
         font-size: 1em;
         text-align: center;
     }
-    
-    .contact > * {
+    .contact>* {
         margin: 0.5em 0 0.5em 0;
     }
     .contact textarea {
-       height: 7rem;
+        height: 7rem;
     }
 }
